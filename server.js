@@ -31,17 +31,14 @@ app.listen(port, () => {
 // get data
 app.get("/allData", (req, res) => {
     res.send(projectData);
-    console.log(res.send(projectData));
 });
 
 // post data
 app.post("/postData", (req, res) => {
-    console.log(req.body);
     projectData = {
         temp: req.body.temp,
         date: req.body.date,
         content: req.body.content,
     };
-    console.log(projectData);
     res.send(projectData);
 });
